@@ -1,5 +1,16 @@
 {% extends 'base.html' %}
 {% block body %}
+<div class="container mt-5">
+    {% if ans=='Heart Disease' %}
+    <div class="alert alert-danger" role="alert">{{ans}}</div>
+    
 
-{{ans}}
+    
+    {% else %}
+    <div class="alert alert-success" role="alert">
+        {{ans}}
+      </div>
+      {% endif %}
+</div>
+
 {% endblock body %}

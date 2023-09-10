@@ -22,8 +22,7 @@ def index():
 
         test=[age,sex,cp,trestbps,chol,fbs,restecg,thalach,exang,oldpeak,slope,ca,thal]
         ans=prediction([test])
-        print(ans)
-        print(len(ans))
+        
         return render_template('update.html',ans=ans)
     return render_template('index.html')
 
