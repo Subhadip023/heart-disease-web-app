@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% block body %}
+<div class="container mt-5">
+  <form maction="/" method="POST">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Age</label>
+      <input
+        type="number"
+        class="form-control"
+        name="age"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3">
+      <p>Enter Your Sex</p>
+      <input type="radio" id="Male" name="sex" value="1" />
+      <label for="Male">Male</label><br>
+      <input type="radio" id="Female" name="sex" value="0" />
+      <label for="Female">Female</label>
+    </div>
+    <div class="mb-3">
+      <p>Chest pain type</p>
+      <input type="radio" id="cp0" name="cp" value="0" />
+      <label for="cp0"><strong>Typical angina:</strong> chest pain related decrease blood supply to the heart</label><br>
+      <input type="radio" id="cp1" name="cp" value="1" />
+      <label for="cp1"><strong>Atypical angina:</strong> chest pain not related to heart</label><br>
+      <input type="radio" id="cp2" name="cp" value="2" />
+      <label for="cp2"><strong> Non-anginal pain:</strong> typically esophageal spasms (non heart related)</label><br>
+      <input type="radio" id="cp3" name="cp" value="3" />
+      <label for="cp3"><strong> Asymptomatic:</strong> chest pain not showing signs of disease
+      </label>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Trestbps</label>
+      <input type="number" class="form-control"   name="trestbps" />
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Serum cholestoral in mg/dl</label>
+      <input type="number" class="form-control"   name="chol"/>
+    </div>
+
+    <div class="mb-3">
+      <p>Fasting blood sugar > 120 mg/dl</p>
+      <input type="radio" id="fbsy" name="fbs" value="1"/>
+      <label for="fbsy"> Yes</label>
+      <input type="radio" id="fbsn" name="fbs" value="0"/>
+      <label for="fbsn"> No</label>
+    </div>
+
+    <div class="mb-3">
+      <p>Resting electrocardiographic results</p>
+      <input type="radio" id="restecg0" name="restecg" value="0"/>
+      <label for="restecg0"> Nothing to note</label> <br>
+      <input type="radio" id="restecg1" name="restecg" value="1"/>
+      <label for="restecg1"> ST-T Wave abnormality (signals non-normal heart beat)</label><br>
+      <input type="radio" id="restecg2" name="restecg" value="2"/>
+      <label for="restecg2"> Possible or definite left ventricular hypertrophy</label>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Maximum heart rate achieved</label>
+      <input type="number" class="form-control"   name="thalach"/>
+    </div>
+
+    <div class="mb-3">
+      <p>Exercise induced angina</p>
+      <input type="radio" id="exangy" name="exang" value="1"/>
+      <label for="exangy"> Yes</label>
+      <input type="radio" id="exangn" name="exang" value="0"/>
+      <label for="exangn"> No</label>
+    </div>
+
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">ST depression induced by exercise relative to rest looks at stress of heart during excercise unhealthy heart will stress more</label>
+      <input type="number" class="form-control"   name="oldpeak" step="0.01" min="0" max="10"/>
+    </div>
+
+
+    <div class="mb-3">
+      <p>The slope of the peak exercise ST segment</p>
+      <input type="radio" id="slope0" name="slope" value="0"/>
+      <label for="slope0">Upsloping: better heart rate with excercise (uncommon)</label> <br>
+      <input type="radio" id="slope1" name="slope" value="1"/>
+      <label for="slope1"> Flatsloping: minimal change (typical healthy heart)</label><br>
+      <input type="radio" id="slope2" name="slope" value="2"/>
+      <label for="slope2"> Downslopins: signs of unhealthy heart</label>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Number of major vessels (0-3) colored by flourosopy</label>
+      <input type="number" class="form-control"   name="ca"/>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Thalium stress resulty</label>
+      <input type="number" class="form-control"   name="thal"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock body %}
