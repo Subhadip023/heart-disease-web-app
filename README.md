@@ -1,6 +1,6 @@
 # heart-disease-web-app
 ## For local server
-***uncomment line no 29 and 30 ***
+*** uncomment line no 29 and 30 ***
 * open this folder in vscode.
 * open terminal 
 * type source env/bin/activate
